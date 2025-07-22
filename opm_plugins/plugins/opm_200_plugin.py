@@ -33,7 +33,7 @@ class OPM_200(OPMInterface):
     def set_wavelength(self,wvl=1310.00):
         self.inst.write(":SENSe"+str(self.ch)+":WAVelength "+str(wvl))
 
-    def set_opm_channel(self,ch=0):
+    def set_opm_channel(self,ch=1):
         self.ch = ch
         self.inst.write(":MODule:SELect "+str(ch))
 
