@@ -31,7 +31,7 @@ class HP8153A(OPMInterface):
         self.inst.write("*RST")
 
     def set_wavelength(self,wvl=1310.00):
-        self.inst.write("SENS"+str(self.ch)+":WAV "+str(wvl)+"NM")
+        self.inst.write("SENS"+str(self.ch)+":POW:WAVE "+str(wvl)+"NM")
     
     def set_opm_channel(self,ch=1):
         self.ch = ch
